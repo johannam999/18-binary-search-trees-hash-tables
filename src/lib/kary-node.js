@@ -1,15 +1,13 @@
 'use strict';
 
-class KAryNode {
+export default class KAryNode {
   constructor(value) {
     this.value = value;
-    this.children = []; // all the children for this node
+    this.children = [];
   }
 
   appendChild(value) {
     const nodeToAppend = new KAryNode(value);
-    this._children.push(nodeToAppend);
-  } 
+    this.children.push(nodeToAppend);
+  }
 }
-
-export default KAryNode();

@@ -25,11 +25,64 @@ export default class KAryTree {
     while (!queue.isEmpty()) {
       currentNode = queue.dequeue();
 
-      // Vinicio - this will be replaced with ANY OTHER OPERATION
       console.log(`Visiting ${currentNode.value}`);
       for (let i = 0; i < currentNode.children.length; i++) {
         queue.enqueue(currentNode.children[i]);
       }
     }
+    return this;
+  }
+
+  find(value) {
+    if (!this.root) return null;
+    return this._find(this.root, value);
+  }
+
+  _find(rootNode, value) {
+    const queue = new Queue();
+    queue.enqueue(rootNode);
+    let currentNode = rootNode;
+
+    while (!queue.isEmpty()) {
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+      currentNode = queue.dequeue();
+      console.log(`Dequeueing ${currentNode.value}`);
+      for (let i = 0; i < currentNode.children.length; i++) {
+        if (currentNode.children[i].value === value) {
+          return currentNode.children[i];
+        }
+        queue.enqueue(currentNode.children[i]);
+      }
+    }
+    return this;
+  }
+
+  toString() {
+    if (!this.root) return 'no root found';
+    return this._toString();
+  }
+
+  _toString() {
+    let str = '';
+    const queue = new Queue();
+    queue.enqueue(this.root);
+
+    let currentNode = null;
+
+    while (!queue.isEmpty()) {
+      currentNode = queue.dequeue();
+      str += `${currentNode.value}\n`;
+
+      for (let i = 0; i < currentNode.children.length; i++) {
+        queue.enqueue(currentNode.children[i]);
+      }
+    }
+    return str;
+  }
+
+  toArray() {
+    
   }
 }

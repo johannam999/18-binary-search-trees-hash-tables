@@ -82,7 +82,7 @@ export default class KAryTree {
     return str;
   }
 
-  toArray() {
+  // toArray() {
     
-  }
+  // }
 }

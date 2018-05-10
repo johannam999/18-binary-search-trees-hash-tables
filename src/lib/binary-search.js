@@ -13,26 +13,17 @@ class BinarySearchTree {
     }
   }
 
-  remove(value){
+  remove(value) {
     let nodeToRemove = this.find(value);
-    nodeToRemove = _remove(nodeToRemove);
+    nodeToRemove=this.__remove(nodeToRemove)
   }
 
-  __remove(node){
+  __remove(nodeToRemove,parentNode) {
     if(!nodeToRemove.left&&!nodeToRemove.right)
-    {return(null);}
-    
-    if(!nodeToRemove.right)
-    {
-        return(nodeToRemove.left);
-    }
-    if(nodeToRemove.left)
-    {
-        return(nodeToRemove.right);
-    }
-    else{
+    {return(null)};
 
-    }
+    if(!nodeToRemove.left)
+    if(!nodeToRemove.right)
   }
 
   _insert(rootNode, nodeToInsert) {
@@ -69,7 +60,6 @@ class BinarySearchTree {
     }
     return this._find(rootNode.left, value);
   }
-  
 }
 
 export default BinarySearchTree;

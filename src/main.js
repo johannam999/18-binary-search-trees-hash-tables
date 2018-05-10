@@ -17,7 +17,8 @@ one.children[1].children[1].appendChild(8);
 
 const kAryTree = new KAryTree(one);
 
-kAryTree.breadthSearchTraversal();
+console.log(kAryTree.find(8));
+console.log(kAryTree.toString());
 
 // -----------------------------------------------------------------------------------
 // const bstFinal = new BinarySearchTree();

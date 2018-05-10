@@ -3,7 +3,7 @@
 import Queue from 'queue-fifo';
 
 export default class KAryTree {
-  constructor(root) {
+  constructor(root = null) {
     this.root = root;
   }
 
@@ -56,11 +56,12 @@ export default class KAryTree {
         queue.enqueue(currentNode.children[i]);
       }
     }
-    return this;
+    console.log(this);
+    return null;
   }
 
   toString() {
-    if (!this.root) return 'no root found';
+    if (!this.root) return null;
     return this._toString();
   }
 

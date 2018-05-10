@@ -20,7 +20,7 @@ describe('KAryTree.find(value)', () => {
   test('should return the node with the given value', () => {
     const find = kAryTree.find(3);
     expect(find.value).toEqual(3);
-    expect(find.children.length).toEqual(3);
+    expect(find.children).toHaveLength(3);
     expect(find.children[0].value).toEqual(5);
     expect(find.children[2].value).toEqual(7);
     expect(find.children[1].children[0].value).toEqual(8);

@@ -34,10 +34,8 @@ class BinarySearchTree {
         this._insert(rootNode.left, nodeToInsert);
       }
     } else if (!rootNode.right) {
-      
       rootNode.right = nodeToInsert;
     } else {
-      
       this._insert(rootNode.right, nodeToInsert);
     }
   }

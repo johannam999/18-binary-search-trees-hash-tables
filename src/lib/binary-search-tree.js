@@ -13,18 +13,18 @@ class BinarySearchTree {
     }
   }
 
-  remove(value) {
-    let nodeToRemove = this.find(value);
-    nodeToRemove=this.__remove(nodeToRemove)
-  }
+  // remove(value) {
+  //   let nodeToRemove = this.find(value);
+  //   nodeToRemove=this.__remove(nodeToRemove)
+  // }
 
-  __remove(nodeToRemove,parentNode) {
-    if(!nodeToRemove.left&&!nodeToRemove.right)
-    {return(null)};
+  // __remove(nodeToRemove,parentNode) {
+  //   if(!nodeToRemove.left&&!nodeToRemove.right)
+  //   {return(null)};
 
-    if(!nodeToRemove.left)
-    if(!nodeToRemove.right)
-  }
+  //   if(!nodeToRemove.left)
+  //   if(!nodeToRemove.right)
+  // }
 
   _insert(rootNode, nodeToInsert) {
     if (nodeToInsert.value < rootNode.value) {
@@ -34,10 +34,8 @@ class BinarySearchTree {
         this._insert(rootNode.left, nodeToInsert);
       }
     } else if (!rootNode.right) {
-      
       rootNode.right = nodeToInsert;
     } else {
-      
       this._insert(rootNode.right, nodeToInsert);
     }
   }

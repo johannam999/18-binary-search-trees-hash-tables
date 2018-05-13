@@ -15,7 +15,9 @@ The Binary Search tree has two methods:
 
 - `bst.insert(value)` - traverses the tree and inserts a node with the specified value into the proper place in the tree.
 
-- `find(value)` - traverses the tree until it finds a node with the specified value.
+- `bst.find(value)` - traverses the tree until it finds a node with the specified value.
+
+- `bst.remove(value)` - traverses the tree until it finds a node with the specified value; removes the node.
 
 Both methods have a space and time complexity of O(h), where h is the height of the tree. This is otherwise knowns a 0(log n).
 

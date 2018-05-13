@@ -1,6 +1,6 @@
 'use strict';
 
-import KAryTree from '../lib/kary-tree';
+import KAryTree from '../lib/kary-tree-queue';
 import KAryNode from '../lib/kary-node';
 
 const one = new KAryNode(1);

@@ -1,6 +1,6 @@
 'use strict';
 
-import KAryTree from '../lib/kary-tree-queue';
+import KAryTree from '../lib/kary-tree';
 import KAryNode from '../lib/kary-node';
 
 const one = new KAryNode(1);
@@ -52,20 +52,3 @@ describe('KAryTree.toString()', () => {
     expect(kAryTreeNull.toString()).toBeNull();
   });
 });
-
-// describe('KAryTree.toArray()', () => {
-//   test('should return array values in a depth-first traversal', () => {
-//     const array = kAryTree.toArray();
-//     expect(array[0]).toEqual(8);
-//     expect(array[1]).toEqual(7);
-//     expect(array[2]).toEqual(6);
-//     expect(array[3]).toEqual(5);
-//     expect(array[4]).toEqual(4);
-//     expect(array[array.length - 1]).toEqual(1);
-//   });
-
-//   test('should return null if if tree root does not exist', () => {
-//     const kAryTreeNull = new KAryTree();
-//     expect(kAryTreeNull.toArray()).toBeNull();
-//   });
-// });

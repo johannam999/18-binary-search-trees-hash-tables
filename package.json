@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/johannam999/18-binary-search-trees-hash-tables#readme",
   "scripts": {
-    "test": "jest --coverage --forceExit ",
+    "test": "eslint . && jest --coverage --forceExit ",
     "watchAll": "--watchAll "
   },
   "devDependencies": {

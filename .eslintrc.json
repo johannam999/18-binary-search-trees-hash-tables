@@ -7,11 +7,13 @@
     "global-require": "off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "no-multi-assign": "off",
-    "no-param-reassign": ["error", { "props": false }],
+    "no-param-reassign": "off",
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-trailing-spaces":"off",
     "linebreak-style": "off",
     "no-underscore-dangle": "off",
-    "strict": "off"
+    "strict": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off"
   }
 }
